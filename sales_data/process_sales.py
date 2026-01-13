@@ -39,7 +39,7 @@ print("discount_price",data)
 sales_report_north_region=data[data[:,-1]=="North"]
 print("north_report",sales_report_north_region)
 
-revenue_north=data[:,-1]
+revenue_north=sales_report_north_region[:,4].astype("int")
 print(revenue_north)
 
 total_revenue_north=np.sum(revenue_north)
